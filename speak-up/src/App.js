@@ -13,10 +13,10 @@ import LanguageSlider from './Pages/LanguageSlider'
 import Categories from './Pages/Categories'
 import Video from './Pages/videos'
 import Player from './Pages/Player'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ReviewCarousel from './components/ReviewCarousel'
 import { useState, useEffect } from 'react'
-
+import Login from './components/Login'
 
 function App() {
   const [width, setWidth] =  useState(window.innerWidth);
@@ -32,7 +32,7 @@ function App() {
   }, []);
 
   return (
-<BrowserRouter>
+<Router>
 <ComplexNavbar/>
    
       <Routes>
@@ -53,9 +53,10 @@ function App() {
     <Info/>
     </div>}/>
           <Route path="/player" element={<Player />} />
+          <Route path='/user-login' element={<Login />} />
       </Routes>
       <Footer/>
-    </BrowserRouter>
+    </Router>
 
   )
 }
