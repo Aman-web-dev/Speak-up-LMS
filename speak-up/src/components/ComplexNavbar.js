@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 export function ComplexNavbar() {
+<<<<<<< HEAD
   return  (
     <div className='mx-8'>
       <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm py-3 sm:py-0 dark:bg-gray-800 dark:border-gray-700">
@@ -16,6 +17,42 @@ export function ComplexNavbar() {
             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
           </svg>
         </button>
+=======
+  const [isNavOpen, setIsNavOpen] = React.useState(false);
+ 
+  const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
+ 
+  React.useEffect(() => {
+    window.addEventListener(
+      "resize",
+      () => window.innerWidth >= 960 && setIsNavOpen(false),
+    );
+  }, []);
+ 
+  return (
+    <Navbar className="text-black  w-[90vw] absolute top-3 left-0 right-0 z-10  p-2 m-auto lg:rounded-full lg:pl-6">
+      <div className="relative mx-auto flex items-center text-blue-gray-900">
+        <Typography
+          as="a"
+          href="#"
+          className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
+        >
+          Speak-Up
+        </Typography>
+        <div className="absolute top-2/4 left-2/4 hidden -translate-x-2/4 -translate-y-2/4 lg:block">
+          <NavList />
+        </div>
+        <IconButton
+          size="sm"
+          color="blue-gray"
+          variant="text"
+          onClick={toggleIsNavOpen}
+          className="ml-auto mr-2 lg:hidden"
+        >
+          <Bars2Icon className="h-6 w-6" />
+        </IconButton>
+        <ProfileMenu />
+>>>>>>> 88347b2ddbbb263df8f5028e8f71db65216d295c
       </div>
     </div>
     <div id="navbar-collapse-with-animation" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
