@@ -245,7 +245,7 @@ export function ComplexNavbar() {
           href="#"
           className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
         >
-          Material Tailwind
+          Speak-Up
         </Typography>
         <div className="absolute top-2/4 left-2/4 hidden -translate-x-2/4 -translate-y-2/4 lg:block">
           <NavList />
