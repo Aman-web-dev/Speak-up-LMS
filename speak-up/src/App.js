@@ -40,11 +40,11 @@ function App() {
       <Route path="/" element={<div className='bg-white'>
     <Hero/>
     <Features/>
-    <CardHolder/>
-    {(width > 850) ? <PricingPage/> : ""}
+    {/* <CardHolder/> */}
+    {/* {(width > 850) ? <PricingPage/> : ""} */}
     <Video/>
     {/* <Carosel/> */}
-    <LanguageSlider/>
+    {/* <LanguageSlider/> */}
     <Categories/>
     <Testimonials/>
     <Popularity/>
